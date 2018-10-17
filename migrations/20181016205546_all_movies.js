@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
    table.string('title').notNullable()
    table.string('director').notNullable()
    table.integer('year')
-   table.integer('rating')
+   table.integer('rating').notNullable()
    table.string('poster_link')
  })
 }
