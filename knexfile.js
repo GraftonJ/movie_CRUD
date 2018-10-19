@@ -6,7 +6,7 @@ module.exports = {
   },
   test: {},
   production: {
-    client: 'g',
+    client: 'pg',
     connection: process.env.DATABASE_URL
   }
 }
