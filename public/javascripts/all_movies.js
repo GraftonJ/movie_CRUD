@@ -46,7 +46,7 @@ function getMovies() {
         let movieId = ev.target.getAttribute('data-id')
 
         // DELETE THIS RECORD!
-        axios.delete(`https://movie-review-103.herokuapp.com/all_movies/${movieId}`)
+        axios.delete(`/all_movies/${movieId}`)
         .then((response) => {
           del_td.parentElement.remove()
         })
@@ -157,7 +157,7 @@ function getMovies() {
             console.log('postData', postData);
 
             // axios.post that data to the correct backend route
-            axios.patch(`https://movie-review-103.herokuapp.com/all_movies/${movieId}`, postData)
+            axios.patch(`/all_movies/${movieId}`, postData)
             .then((response) => {
               removeMessage()
               let success = document.createElement('p')
