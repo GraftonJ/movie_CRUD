@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Use AJAX to get the cryptids and append them to a table in the DOM
 function getMovies() {
   console.log('getMovies Function');
-  axios.get('https://movie-review-103.herokuapp.com/all_movies')
+  axios.get('/all_movies')
   .then((response) => {
     // DOM manipulation, need to create TRs, TDs
     response.data.forEach((movie) => {
