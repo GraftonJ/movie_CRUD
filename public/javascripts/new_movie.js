@@ -24,7 +24,7 @@ function handleFormSubmit() {
     console.log('postData', postData);
 
     // axios.post that data to the correct backend route
-    axios.post('http://localhost:3000/all_movies', postData)
+    axios.post('https://movie-review-103.herokuapp.com/all_movies', postData)
     .then((response) => {
       document.getElementById("submit-form").disabled = true
       let success = document.createElement('p')
