@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Use AJAX to get the cryptids and append them to a table in the DOM
 function getMovies() {
   console.log('getMovies Function');
-  axios.get('http://localhost:3000/all_movies')
+  axios.get('https://movie-review-103.herokuapp.com/all_movies')
   .then((response) => {
     // DOM manipulation, need to create TRs, TDs
     response.data.forEach((movie) => {
@@ -46,7 +46,7 @@ function getMovies() {
         let movieId = ev.target.getAttribute('data-id')
 
         // DELETE THIS RECORD!
-        axios.delete(`http://localhost:3000/all_movies/${movieId}`)
+        axios.delete(`https://movie-review-103.herokuapp.com/all_movies/${movieId}`)
         .then((response) => {
           del_td.parentElement.remove()
         })
@@ -157,7 +157,7 @@ function getMovies() {
             console.log('postData', postData);
 
             // axios.post that data to the correct backend route
-            axios.patch(`http://localhost:3000/all_movies/${movieId}`, postData)
+            axios.patch(`https://movie-review-103.herokuapp.com/all_movies/${movieId}`, postData)
             .then((response) => {
               removeMessage()
               let success = document.createElement('p')
